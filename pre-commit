@@ -1,0 +1,113 @@
+#!/bin/bash
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-commit".
+
+# To use for debug
+# https://stackoverflow.com/questions/10586153/split-string-into-an-array-in-bash
+#for element in "${array_cache[@]}"
+#do
+#    echo $element
+#done
+#echo "${#array_cache[@]}"
+
+
+cat <<\EOF
+The code quality inspection process is running.
+Thanks for waiting a few minutes. (~2mn)
+EOF
+
+#### Create commited file log folder
+if [ ! -d '.task_runner_caches' ]; then
+  mkdir .task_runner_caches
+fi
+#### Load commited files from cache file
+if [  -f '.task_runner_caches/commited_files' ]; then
+  CACHE_FILES=$(cat .task_runner_caches/commited_files)
+fi
+#### Split cached file in array
+IFS=', ' read -r -a array_cache <<< "$CACHE_FILES"
+
+
+#### Check for nex updated files
+FILES=$(git diff --cached --name-status | awk '{if ($1 != "D") { print $2"," }}' | sed "s/\n//")
+FILES2=$(echo $FILES |sed "s/.$//")
+
+#### Split commited file in array
+IFS=', ' read -r -a array <<< "$FILES2"
+
+#### Check for existant file in cache
+for element in "${array[@]}"
+do
+    EXIST=false
+    for element_cache in "${array_cache[@]}"
+    do
+        if [ "$element" = "$element_cache" ]; then
+            EXIST=true
+        fi
+    done
+    if [ "$EXIST" = "false" ]; then
+        if [ ! "$CACHE_FILES" = "" ]; then
+            CACHE_FILES="$CACHE_FILES,$element"
+        else
+            CACHE_FILES="$element"
+        fi
+    fi
+done
+
+#### Check for deleted file
+IFS=', ' read -r -a array <<< "$CACHE_FILES"
+NEW_CACHE=""
+for element in "${array[@]}"
+do
+    if [ -f "$element" ]; then
+        if [ ! "$NEW_CACHE" = "" ]; then
+            NEW_CACHE="$NEW_CACHE,$element"
+        else
+            NEW_CACHE="$element"
+        fi
+    fi
+done
+
+#### Save file to cache
+echo $NEW_CACHE > .task_runner_caches/commited_files
+
+
+#Call Task runner
+LOGS=$(docker exec apache_template-integration_dev gulp dev-task-runner-v1 --file "${NEW_CACHE}")
+AUX=$(echo ${LOGS##* })
+QUALITY=$(echo ${AUX##* })
+
+if ([ "$QUALITY" != 'OK' ] && [ "$QUALITY" != 'WARN' ])
+then
+cat <<\EOF
+Quality Gates ERROR : Your code does not meet all the required quality rules
+Please check the report in sonar
+EOF
+exit 1
+fi
+
+if [ "$QUALITY" == 'WARN' ]
+then
+cat <<\EOF
+You have reached the minimal quality gate limit, Please review your code and correct some issues.
+EOF
+exit 1
+fi
+
+if [ "$QUALITY" == 'OK' ]
+then
+cat <<\EOF
+  _______     ______      ______    ________            ___    ______    _______
+ /" _   "|   /    " \    /    " \  |"      "\          |"  |  /    " \  |   _  "\
+(: ( \___)  // ____  \  // ____  \ (.  ___  :)         ||  | // ____  \ (. |_)  :)
+ \/ \      /  /    ) :)/  /    ) :)|: \   ) ||         |:  |/  /    ) :)|:     \/
+ //  \ ___(: (____/ //(: (____/ // (| (___\ ||      ___|  /(: (____/ // (|  _  \\
+(:   _(  _|\        /  \        /  |:       :)     /  :|_/ )\        /  |: |_)  :)
+ \_______)  \"_____/    \"_____/   (________/     (_______/  \"_____/   (_______/
+EOF
+fi

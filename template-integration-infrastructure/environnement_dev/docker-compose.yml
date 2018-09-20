@@ -1,0 +1,25 @@
+version: "2"
+services:
+
+  web_template-integration_dev:
+    build: .
+    container_name: apache_template-integration_dev
+    ports:
+      - 8086:80
+    volumes:
+      - ../..:/var/www/html
+    environment:
+      DEV_USERNAME: $DEVELOPPER
+    entrypoint: ./template-integration-infrastructure/environnement_dev/entrypoint.sh
+    networks:
+      template-integration_net:
+        ipv4_address: 10.1.101.3
+
+networks:
+  template-integration_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 10.1.101.0/24
+        gateway: 10.1.101.1
