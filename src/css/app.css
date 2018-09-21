@@ -1,0 +1,48 @@
+/*  Base */
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+/* Layout */
+/* Module */
+.bloc {
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 20px; }
+
+.title {
+  background-color: #FF9800;
+  border-radius: 15px 15px 0 0;
+  margin: -20px -20px 20px;
+  padding: 10px 20px;
+  position: relative; }
+
+.title p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0; }
+
+.content p {
+  text-align: justify; }
+
+.bloc .tabs {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
+.bloc .tabs a {
+  background-color: #f7cd90;
+  border-radius: 5px 5px 0 0;
+  color: #696969;
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 3px;
+  text-shadow: none;
+  text-decoration: none;
+  padding: 5px 10px; }
+
+.bloc .tabs a:hover, .bloc .tabs a:active, .bloc .tabs a.active {
+  background-color: #e0e0e0;
+  color: #000; }
+
+/*# sourceMappingURL=app.css.map */
