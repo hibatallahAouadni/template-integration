@@ -1,5 +1,4 @@
 
-
 .bloc {
     background-color: #e0e0e0;
     border-radius: 15px;
@@ -46,4 +45,59 @@
 .bloc .tabs a:hover, .bloc .tabs a:active, .bloc .tabs a.active {
     background-color: #e0e0e0;
     color: #000;
+}
+
+//  page services
+.bloc-titre {
+    text-align: center;
+    padding: 70px 0 60px;
+    position: relative;
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    p {
+        color: #918f89;
+    }
+}
+.bloc-titre::before, .bloc-titre::after {
+    background-color: #9e9e9d;
+    content: '';
+    display: block;
+    position: fixed;
+    height: 95px;
+    width: 320px;
+    top: 0;
+    right: -8px;
+    z-index: -1;
+    transform-origin: 0 0;
+    transform: skewX(20deg);
+}
+
+.bloc-icons {
+    display: inline-flex;
+    margin: 40px 160px 100px 0;
+    .icon {
+        padding: 30px;
+        border: 1px solid #9e9e9d;
+        transform: scale(1) rotate(45deg);
+        margin: 0px 50px;
+        img {
+            transform: rotate(-45deg);
+        }
+    }
+    .icon:active, .icon:hover {
+        box-shadow: 6px 6px #2068b6;
+    }
+    .icon.active {
+        box-shadow: 6px 6px #2068b6;
+    }
+}
+
+.bloc-desc {
+    background-color: #f2f2f2;
+    h1 {
+        font-size: 30px;
+    }
 }

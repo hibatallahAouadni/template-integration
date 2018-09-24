@@ -11,15 +11,24 @@ jQuery(function($) {
         }else {
             current = $(this).find('a:first').attr('href');
         }
-        $(this).find('a[href="' + current + '"]').addClass('active');
+        if($('.tabs').parent('#services').length != 0) {
+            $(this).find('a[href="' + current + '"]').parent('.icon').addClass('active');
+        } else {
+            $(this).find('a[href="' + current + '"]').addClass('active');
+        }
         $(current).siblings().hide();
         $(this).find('a').click(function() {
             var link = $(this).attr('href');
             if( link == current) {
                 return false;
             }else {
-                $(this).siblings().removeClass('active');
-                $(this).addClass('active');
+                if($('.tabs').parent('#services').length != 0) {
+                    $(this).parent('.icon').siblings().removeClass('active');
+                    $(this).parent('.icon').addClass('active');
+                } else {
+                    $(this).siblings().removeClass('active');
+                    $(this).addClass('active');
+                }
                 $(link).show().siblings().hide();
                 current = link;
                 Cookies.set('tab' + id, current);
