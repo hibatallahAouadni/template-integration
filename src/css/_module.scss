@@ -48,10 +48,16 @@
 }
 
 //  page services
+
+.bloc-icons, .bloc-desc, .bloc-cards {
+    padding: 0 10%;
+}
+
 .bloc-titre {
     text-align: center;
     padding: 70px 0 60px;
     position: relative;
+    overflow: hidden;
     h1 {
         font-size: 36px;
         font-weight: bold;
@@ -61,11 +67,11 @@
         color: #918f89;
     }
 }
-.bloc-titre::before, .bloc-titre::after {
+#grand-title::before {
     background-color: #9e9e9d;
     content: '';
     display: block;
-    position: fixed;
+    position: absolute;
     height: 95px;
     width: 320px;
     top: 0;
@@ -97,7 +103,144 @@
 
 .bloc-desc {
     background-color: #f2f2f2;
+    margin-top: 40px;
+    padding-bottom: 50px;
+    position: relative;
     h1 {
         font-size: 30px;
+    }
+    .bloc-active {
+        background-color: #f2f2f2;
+        display: block !important;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: -25px;
+        margin-left: 80px;
+        transform: rotate(45deg);
+    }
+}
+
+.bloc-cards {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+div.card {
+    width: 30%;
+    overflow: hidden;
+    margin: 0 30px 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .header {
+        background-color: #3d89db;
+        display: table;
+        width: 100%;
+        transform-origin: 500px 150px;
+        transform: rotate(10deg);
+    }
+    .header-icon {
+        display: table-cell;
+        text-align: center;
+        vertical-align: bottom;
+        background-color: #2068b6;
+        height: 150px;
+        width: 150px;
+        transform-origin: 30px 40px;
+        transform: rotate(30deg) skewX(7deg);
+        img {
+            transform: rotate(-40deg) skewX(-5deg) skewY(3deg);
+            margin-left: 35px;
+            margin-bottom: 15px;
+        }
+    }
+    .header-title {
+        color: #fff;
+        display: table-cell;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: right;
+    }
+    .header-title-text {
+        padding: 60px 40px 0 50px;
+        transform: rotate(-10deg);
+    }
+    .contain {
+        color: #918f89;
+        padding: 20px;
+        li {
+            list-style-type: none;
+            line-height: 1.75em;
+            position: relative;
+        }
+        li::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            margin-left: -20px;
+            width: 0; 
+            height: 0; 
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-left: 7px solid red;
+        }
+    }
+}
+
+#bloc5 {
+    .bloc-cards {
+        display: block;
+    }
+    .row {
+        display: flex;
+    }
+    .card {
+        background-color: #2b7fd9;
+        color: #fff;
+        margin: 10px;
+        padding: 27px 17px;
+        position: relative;
+        height: 246px;
+        width: 266px;
+        .icon {
+            background: url(../img/phone.png) 41px 58px;
+            height: 58px;
+            width: 41px;
+        }
+        h4 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+    }
+    .ellipse-up {
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        border-radius: 125px;
+        right: -125px;
+        top: -115px;
+    }
+    .ellipse-down {
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        border-radius: 125px;
+        bottom: -180px;
+        left: 20px;
+    }
+    .card:hover {
+        background-color: #dadada;
+        color: #4e4d4d;
+        .icon {
+            background: url(../img/phone.png) 0px 0px;
+        }
     }
 }

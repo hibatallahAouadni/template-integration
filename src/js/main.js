@@ -17,7 +17,8 @@ jQuery(function($) {
             $(this).find('a[href="' + current + '"]').addClass('active');
         }
         $(current).siblings().hide();
-        $(this).find('a').click(function() {
+        $(this).find('a').click(function(evt) {
+            evt.preventDefault();
             var link = $(this).attr('href');
             if( link == current) {
                 return false;
@@ -25,6 +26,25 @@ jQuery(function($) {
                 if($('.tabs').parent('#services').length != 0) {
                     $(this).parent('.icon').siblings().removeClass('active');
                     $(this).parent('.icon').addClass('active');
+                    switch($(this).parent('.icon').attr('id')) {
+                        case 'pos1':
+                            $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(0%) rotate(45deg)'});
+                            break;
+                        case 'pos2':
+                            $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(275%) rotate(45deg)'});
+                            break;
+                        case 'pos3':
+                            $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(550%) rotate(45deg)'});
+                            break;
+                        case 'pos4':
+                            $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(820%) rotate(45deg)'});
+                            break;
+                        case 'pos5':
+                            $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(1090%) rotate(45deg)'});
+                            break;
+                        default: break;
+                    }
+                    
                 } else {
                     $(this).siblings().removeClass('active');
                     $(this).addClass('active');

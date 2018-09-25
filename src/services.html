@@ -15,60 +15,371 @@
         <script type="text/javascript" src="js/main.js"></script>
     </head>
     <body id="services">
-        <div class="bloc-titre">
+        <div class="bloc-titre" id="grand-title">
             <h1>RESPECT, SÉCURITÉ, CONFIDENTIALITÉ</h1>
             <p>Nos service enrichis par nos expériences, nos processus et notre infrastructure sont la garantie pour  la réussite de vos projets.</p>
         </div>
         <div class="bloc-icons tabs" id="icons">
-            <div class="icon">
+            <div class="icon" id="pos1">
                 <a href="#bloc1">
                     <img src="img/web.png" alt="web"/>
                 </a>
             </div>
-            <div class="icon">
+            <div class="icon" id="pos2">
                 <a href="#bloc2">
                     <img src="img/maintenance.png" alt="maintenance"/>
                 </a>
             </div>
-            <div class="icon">
+            <div class="icon" id="pos3">
                 <a href="#bloc3">
                     <img src="img/evaluation.png" alt="evaluation"/>
                 </a>
             </div>
-            <div class="icon">
+            <div class="icon" id="pos4">
                 <a href="#bloc4">
                     <img src="img/networking.png" alt="networking"/>
                 </a>
             </div>
-            <div class="icon">
+            <div class="icon" id="pos5">
                 <a href="#bloc5">
                     <img src="img/procedure.png" alt="procedure"/>
                 </a>
             </div>
         </div>
         <div class="bloc-desc">
-            <div class="bloc-titre">
-                <h1>INTÉGRATION ET DÉVELOPPEMENT</h1>
-                <p>SiFAST vous accompagne dans la réalisation de vos projets techniques et métiers. Nos ingénieurs hautement qualifiés, nos processus 
-                    et méthodologies industrialisés, nos outils de développement éprouvés, et nos standards de qualité permettent de réduire les cycles de développements 
-                    et d’optimiser le rapport qualité/prix.</p>
-            </div>
-            <div class="bloc-cards">
-                <div class="card">
-                    <div class="header">
-                        <div class="header-icon">
-                            <img src="img/handshake.png"/>
+            <div class="bloc-active"></div>
+            <div id="bloc1">
+                <div class="bloc-titre">
+                    <h1>INTÉGRATION ET DÉVELOPPEMENT</h1>
+                    <p>SiFAST vous accompagne dans la réalisation de vos projets techniques et métiers. Nos ingénieurs hautement qualifiés, nos processus 
+                        et méthodologies industrialisés, nos outils de développement éprouvés, et nos standards de qualité permettent de réduire les cycles de développements 
+                        et d’optimiser le rapport qualité/prix.</p>
+                </div>
+                <div class="bloc-cards">
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/handshake.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Nos engagements</div>
+                            </div>
                         </div>
-                        <div class="header-title">Nos engagements</div>
+                        <div class="contain">
+                            <ul>
+                                <li>Plan Assurance Qualité adapté pour chaque projet</li>
+                                <li>Respect des standards du marché</li>
+                                <li>Respect des coûts et des délais</li>
+                                <li>Transparence des tarifications</li>
+                                <li>Reporting au fil de l’eau</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="contain">
-                        <ul>
-                            <li>Plan Assurance Qualité adapté pour chaque projet</li>
-                            <li>Respect des standards du marché</li>
-                            <li>Respect des coûts et des délais</li>
-                            <li>Transparence des tarifications</li>
-                            <li>Reporting au fil de l’eau</li>
-                        </ul>
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/arm.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Nos<br> atouts</div>
+                            </div>
+                        </div>
+                        <div class="contain">
+                            <ul>
+                                <li>Équipe expérimentée et formée à la norme ITIL</li>
+                                <li>Maîtrise de l’hyper-convergence, du clustering, de la virtualisation et de la haute disponibilité</li>
+                                <li>Infrastructure moderne, scalable, résiliente et sécurisée</li>
+                                <li>Industrialisation de nos outils et de nos process</li>
+                                <li>Démarche qualité</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/catalog.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Catalogue de services</div>
+                            </div>
+                        </div>
+                        <div class="contain">
+                            <ul>
+                                <li>Audit, conseil en architecture système & réseau, étude d'optimisation et rationalisation des coûts</li>
+                                <li>Installation, virtualisation, consolidation des infrastructures et des données : serveurs, stockages, réseaux, switchs…</li>
+                                <li>Interconnexion : LAN, WAN, VPN, firewalls, accès distants, sécurité, authentification, …</li>
+                                <li>Communication : IP PBX, VoIP, Passerelle GSM, Fax, Messagerie, …</li>
+                                <li>Hébergement / Exploitation / Administration / Supervision / Alerting / HelpDesk</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bloc2">
+                <div class="bloc-titre">
+                    <h1>TMA (TIERCE MAINTENANCE APPLICATIVE)</h1>
+                    <p>SiFAST vous propose de l’outsourcing applicatif adapté à votre stratégie et à vos contraintes. Grâce à nos expertises et notre savoir faire en TMA, <br>
+                        nous vous assurons une maintenance et une évolution optimisées de vos applications, une réduction de vos coûts opérationnels <br>
+                        et une garantie de qualité et de réussite.</p>
+                </div>
+                <div class="bloc-cards">
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/handshake.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Nos engagements</div>
+                            </div>
+                        </div>
+                        <div class="contain">
+                            <ul>
+                                <li>Plan Assurance Qualité adapté pour chaque projet</li>
+                                <li>Respect des standards du marché</li>
+                                <li>Respect des coûts et des délais</li>
+                                <li>Transparence des tarifications</li>
+                                <li>Reporting au fil de l’eau</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/arm.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Nos<br> atouts</div>
+                            </div>
+                        </div>
+                        <div class="contain">
+                            <ul>
+                                <li>Équipe expérimentée et formée à la norme ITIL</li>
+                                <li>Maîtrise de l’hyper-convergence, du clustering, de la virtualisation et de la haute disponibilité</li>
+                                <li>Infrastructure moderne, scalable, résiliente et sécurisée</li>
+                                <li>Industrialisation de nos outils et de nos process</li>
+                                <li>Démarche qualité</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/catalog.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Catalogue de services</div>
+                            </div>
+                        </div>
+                        <div class="contain">
+                            <ul>
+                                <li>Audit, conseil en architecture système & réseau, étude d'optimisation et rationalisation des coûts</li>
+                                <li>Installation, virtualisation, consolidation des infrastructures et des données : serveurs, stockages, réseaux, switchs…</li>
+                                <li>Interconnexion : LAN, WAN, VPN, firewalls, accès distants, sécurité, authentification, …</li>
+                                <li>Communication : IP PBX, VoIP, Passerelle GSM, Fax, Messagerie, …</li>
+                                <li>Hébergement / Exploitation / Administration / Supervision / Alerting / HelpDesk</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bloc3">
+                <div class="bloc-titre">
+                    <h1>TRA ( TIERCE RECETTE APPLICATIVE )</h1>
+                    <p>SiFAST vous permet d’industrialiser et de gérer votre patrimoine de test (plan de tests, jeux de tests, tests automatisés ...) de vos <br>
+                        applications afin de mieux supporter vos processus.</p>
+                </div>
+                <div class="bloc-cards">
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/handshake.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Nos engagements</div>
+                            </div>
+                        </div>
+                        <div class="contain">
+                            <ul>
+                                <li>Plan Assurance Qualité adapté pour chaque projet</li>
+                                <li>Respect des standards du marché</li>
+                                <li>Respect des coûts et des délais</li>
+                                <li>Transparence des tarifications</li>
+                                <li>Reporting au fil de l’eau</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/arm.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Nos<br> atouts</div>
+                            </div>
+                        </div>
+                        <div class="contain">
+                            <ul>
+                                <li>Équipe expérimentée et formée à la norme ITIL</li>
+                                <li>Maîtrise de l’hyper-convergence, du clustering, de la virtualisation et de la haute disponibilité</li>
+                                <li>Infrastructure moderne, scalable, résiliente et sécurisée</li>
+                                <li>Industrialisation de nos outils et de nos process</li>
+                                <li>Démarche qualité</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/catalog.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Catalogue de services</div>
+                            </div>
+                        </div>
+                        <div class="contain">
+                            <ul>
+                                <li>Audit, conseil en architecture système & réseau, étude d'optimisation et rationalisation des coûts</li>
+                                <li>Installation, virtualisation, consolidation des infrastructures et des données : serveurs, stockages, réseaux, switchs…</li>
+                                <li>Interconnexion : LAN, WAN, VPN, firewalls, accès distants, sécurité, authentification, …</li>
+                                <li>Communication : IP PBX, VoIP, Passerelle GSM, Fax, Messagerie, …</li>
+                                <li>Hébergement / Exploitation / Administration / Supervision / Alerting / HelpDesk</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bloc4">
+                <div class="bloc-titre">
+                    <h1>INGÉNIERIE SYSTEMES ET RÉSEAUX</h1>
+                    <p>SiFAST, forts de son expérience, vous accompagne pour rationaliser, virtualiser et mutualiser votre infrastructure avec une attention <br>
+                        permanente concernant la fiabilité, la disponibilité et la sécurité.</p>
+                </div>
+                <div class="bloc-cards">
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/handshake.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Nos engagements</div>
+                            </div>
+                        </div>
+                        <div class="contain">
+                            <ul>
+                                <li>Plan Assurance Qualité adapté pour chaque projet</li>
+                                <li>Respect des standards du marché</li>
+                                <li>Respect des coûts et des délais</li>
+                                <li>Transparence des tarifications</li>
+                                <li>Reporting au fil de l’eau</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/arm.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Nos<br> atouts</div>
+                            </div>
+                        </div>
+                        <div class="contain">
+                            <ul>
+                                <li>Équipe expérimentée et formée à la norme ITIL</li>
+                                <li>Maîtrise de l’hyper-convergence, du clustering, de la virtualisation et de la haute disponibilité</li>
+                                <li>Infrastructure moderne, scalable, résiliente et sécurisée</li>
+                                <li>Industrialisation de nos outils et de nos process</li>
+                                <li>Démarche qualité</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            <div class="header-icon">
+                                <img src="img/catalog.png"/>
+                            </div>
+                            <div class="header-title">
+                                <div class="header-title-text">Catalogue de services</div>
+                            </div>
+                        </div>
+                        <div class="contain">
+                            <ul>
+                                <li>Audit, conseil en architecture système & réseau, étude d'optimisation et rationalisation des coûts</li>
+                                <li>Installation, virtualisation, consolidation des infrastructures et des données : serveurs, stockages, réseaux, switchs…</li>
+                                <li>Interconnexion : LAN, WAN, VPN, firewalls, accès distants, sécurité, authentification, …</li>
+                                <li>Communication : IP PBX, VoIP, Passerelle GSM, Fax, Messagerie, …</li>
+                                <li>Hébergement / Exploitation / Administration / Supervision / Alerting / HelpDesk</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bloc5">
+                <div class="bloc-titre">
+                    <h1>EXPERTISES TECHNIQUES</h1>
+                    <p>SiFAST, de par sa veille technologique, ses investissements, ses retours d’expérience et guidée par son choix DevOps, vous apporte <br>
+                        son expertise technique pour la réussite de vos projets..</p>
+                </div>
+                <div class="bloc-cards">
+                    <div class="row">
+                            <div class="card">
+                                <div class="ellipse-up"></div>
+                                <div class="icon"></div>
+                                <h4>Mobile</h4>
+                                <p>Web App Responsive, PWA, React Native, Lottie, IONIC, AMP, IOS SDK, Android SDK, Swift</p>
+                                <div class="ellipse-down"></div>
+                            </div>
+                            <div class="card">
+                                <div class="ellipse-up"></div>
+                                <div class="icon"></div>
+                                <h4>Mobile</h4>
+                                <p>Web App Responsive, PWA, React Native, Lottie, IONIC, AMP, IOS SDK, Android SDK, Swift</p>
+                                <div class="ellipse-down"></div>
+                            </div>
+                            <div class="card">
+                                <div class="ellipse-up"></div>
+                                <div class="icon"></div>
+                                <h4>Mobile</h4>
+                                <p>Web App Responsive, PWA, React Native, Lottie, IONIC, AMP, IOS SDK, Android SDK, Swift</p>
+                                <div class="ellipse-down"></div>
+                            </div>
+                            <div class="card">
+                                <div class="ellipse-up"></div>
+                                <div class="icon"></div>
+                                <h4>Mobile</h4>
+                                <p>Web App Responsive, PWA, React Native, Lottie, IONIC, AMP, IOS SDK, Android SDK, Swift</p>
+                                <div class="ellipse-down"></div>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="card">
+                                <div class="ellipse-up"></div>
+                                <div class="icon"></div>
+                                <h4>Mobile</h4>
+                                <p>Web App Responsive, PWA, React Native, Lottie, IONIC, AMP, IOS SDK, Android SDK, Swift</p>
+                                <div class="ellipse-down"></div>
+                            </div>
+                            <div class="card">
+                                <div class="ellipse-up"></div>
+                                <div class="icon"></div>
+                                <h4>Mobile</h4>
+                                <p>Web App Responsive, PWA, React Native, Lottie, IONIC, AMP, IOS SDK, Android SDK, Swift</p>
+                                <div class="ellipse-down"></div>
+                            </div>
+                            <div class="card">
+                                <div class="ellipse-up"></div>
+                                <div class="icon"></div>
+                                <h4>Mobile</h4>
+                                <p>Web App Responsive, PWA, React Native, Lottie, IONIC, AMP, IOS SDK, Android SDK, Swift</p>
+                                <div class="ellipse-down"></div>
+                            </div>
+                            <div class="card">
+                                <div class="ellipse-up"></div>
+                                <div class="icon"></div>
+                                <h4>Mobile</h4>
+                                <p>Web App Responsive, PWA, React Native, Lottie, IONIC, AMP, IOS SDK, Android SDK, Swift</p>
+                                <div class="ellipse-down"></div>
+                            </div>
                     </div>
                 </div>
             </div>
