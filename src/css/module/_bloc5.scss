@@ -1,0 +1,62 @@
+
+.bloc5 {
+    .bloc-cards {
+        display: block;
+    }
+}
+
+.row {
+    display: flex;
+}
+
+.bloc5__card {
+    background-color: #2b7fd9;
+    color: #fff;
+    margin: 10px;
+    padding: 27px 17px;
+    position: relative;
+    overflow: hidden;
+    height: 246px;
+    width: 266px;
+}
+
+.bloc5__icon {
+    background: url(../img/phone.png) 41px 58px;
+    height: 58px;
+    width: 41px;
+}
+
+.bloc5__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.bloc5__card:hover {
+    background-color: #dadada;
+    color: #4e4d4d;
+    .bloc5__icon {
+        background: url(../img/phone.png) 0px 0px;
+    }
+}
+
+.ellipse-up {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    border-radius: 125px;
+    right: -125px;
+    top: -115px;
+}
+
+.ellipse-down {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    border-radius: 125px;
+    bottom: -180px;
+    left: 20px;
+}

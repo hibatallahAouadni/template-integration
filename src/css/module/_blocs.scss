@@ -1,0 +1,63 @@
+
+// title bloc 
+
+.bloc-title {
+    text-align: center;
+    padding: 70px 0 60px;
+    position: relative;
+    overflow: hidden;
+}
+.bloc-title__header {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.bloc-title__body {
+    color: #918f89;
+}
+
+// icons bloc 
+
+.bloc-icons {
+    display: inline-flex;
+    margin: 40px 160px 100px 0;
+}
+.bloc-icons__icon {
+    padding: 30px;
+    border: 1px solid #9e9e9d;
+    transform: scale(1) rotate(45deg);
+    margin: 0px 50px;
+    img {
+        transform: rotate(-45deg);
+    }
+}
+.bloc-icons__icon:active, .bloc-icons__icon:hover {
+    box-shadow: 6px 6px #2068b6;
+}
+.bloc-icons__icon.active {
+    box-shadow: 6px 6px #2068b6;
+}
+
+// desc bloc 
+
+.bloc-desc {
+    background-color: #f2f2f2;
+    margin-top: 40px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.bloc-desc__header {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.bloc-active {
+    background-color: #f2f2f2;
+    display: block !important;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -25px;
+    margin-left: 80px;
+    transform: rotate(45deg);
+}
