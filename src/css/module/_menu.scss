@@ -1,0 +1,31 @@
+
+.menu-logo {
+    display: table-cell;
+    padding: 0 90px;
+}
+
+.menu-logo-img {
+    width: 160px;
+}
+
+.menu-nav {
+    background-color: #f06428;
+    display: table-cell;
+    transform-origin: 0 0;
+    transform: skewX(20deg);
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.menu-nav-list {
+    display: flex;
+    font-family: 'Saira', sans-serif;
+    list-style-type: none;
+    transform: skewX(-20deg);
+}
+
+.menu-nav-list-item {
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-left: 80px;
+}
