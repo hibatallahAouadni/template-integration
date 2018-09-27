@@ -311,6 +311,10 @@ div.card {
   bottom: -180px;
   left: 20px; }
 
+.menu {
+  position: relative;
+  overflow: hidden; }
+
 .menu-logo {
   display: table-cell;
   padding: 0 90px; }
