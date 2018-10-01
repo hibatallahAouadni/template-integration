@@ -362,8 +362,10 @@ div.card {
   position: relative;
   top: -170px; }
 
+.contact-row {
+  margin-top: -135px; }
+
 .container-contact {
-  margin-top: -135px;
   width: 80%; }
 
 .contact-info {
@@ -400,7 +402,7 @@ div.card {
   vertical-align: middle; }
 
 .contact-form-control {
-  padding: 5px 0;
+  padding: 5px 20px 5px 0;
   width: 45%; }
 
 .form-control {
@@ -412,5 +414,43 @@ div.card {
 .span {
   content: '';
   width: 7.5%; }
+
+.contact-form-control.textarea {
+  width: 100%; }
+
+textarea.form-control {
+  height: 150px; }
+
+.contact-action-mandatory {
+  font-size: 12px;
+  margin-top: -10px;
+  width: 50%; }
+
+.contact-action-buttons {
+  text-align: right;
+  width: 50%; }
+
+.contact-action-button {
+  background-color: #fff;
+  border: 1px solid #0064b9;
+  color: #0064b9;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 30px;
+  text-transform: uppercase; }
+
+.contact-info-bloc {
+  line-height: 32px;
+  margin-bottom: 30px;
+  padding: 0 30px 0 10px; }
+
+.contact-info-bloc-title {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.bleu-color {
+  color: #0064b9; }
 
 /*# sourceMappingURL=app.css.map */

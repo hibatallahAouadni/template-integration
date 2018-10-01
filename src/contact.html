@@ -55,8 +55,8 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d974.6996437229157!2d10.750034814197537!3d34.743354789865144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1301d32bf86c25d1%3A0xea6312a1021019d!2sSiFAST!5e0!3m2!1sfr!2stn!4v1538129755670" 
                         width="100%" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
-                <div class="row">
-                    <div class="container-contact">
+                <div class="row contact-row">
+                    <form action="#" method="POST" class="container-contact">
                         <div class="contact-form">
                             <div class="contact-form-header">
                                 Vos coordonées
@@ -78,13 +78,70 @@
                                     <input type="text" name="nom" class="form-control"/>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="contact-form-control">
+                                    <label class="contact-form-label">Courriel<span class="red-star">*</span>:</label>
+                                    <input type="text" name="courriel" class="form-control"/>
+                                </div>
+                                <div class="span"></div>
+                                <div class="contact-form-control">
+                                    <label class="contact-form-label">Téléphone:</label>
+                                    <input type="text" name="telephone" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="contact-form-control">
+                                    <label class="contact-form-label">Société:</label>
+                                    <input type="text" name="societe" class="form-control"/>
+                                </div>
+                                <div class="span"></div>
+                                <div class="contact-form-control">
+                                    <label class="contact-form-label">Sujet<span class="red-star">*</span>:</label>
+                                    <input type="text" name="sujet" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="contact-form-control textarea">
+                                    <label class="contact-form-label">Message<span class="red-star">*</span>:</label>
+                                    <textarea rows="4" cols="50" class="form-control"></textarea>
+                                </div>
+                            </div>
                         </div>
                         <div class="contact-form">
                             <div class="contact-form-recaptcha"></div>
                         </div>
-                        <div class="contact-buttons"></div>
+                        <div class="contact-action row">
+                            <div class="contact-action-mandatory">
+                                Les champs précédés d'un astérique <span class="red-star">(*)</span> sont obligatoires.
+                            </div>
+                            <div class="contact-action-buttons">
+                                <button type="reset" value="annuler" class="contact-action-button">Annuler</button>
+                                <button type="submit" value="envoyer" class="contact-action-button">Envoyer</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="contact-info">
+                        <div class="contact-info-bloc">
+                            <div class="contact-info-bloc-title">France</div>
+                            <div class="contact-info-bloc-adr">
+                                9 boulevard Devaux 78300 POISSY
+                            </div>
+                            <div class="contact-info-bloc-tel">
+                                <strong>Tél:</strong> <span class="bleu-color">(+33) 01 84 23 08 01</span><br>
+                                <strong>Fax:</strong> <span class="bleu-color">(+33) 01 84 23 08 02</span>
+                            </div>
+                        </div>
+                        <div class="contact-info-bloc">
+                            <div class="contact-info-bloc-title">Tunisie</div>
+                            <div class="contact-info-bloc-adr">
+                                Route el ain Km1 Sfax 3003
+                            </div>
+                            <div class="contact-info-bloc-tel">
+                                <strong>Tél:</strong> <span class="bleu-color">(+216) 74 242 608</span><br>
+                                <strong>Fax:</strong> <span class="bleu-color">(+216) 74 242 409</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-info"></div>
                 </div>
             </div>
         </div>
