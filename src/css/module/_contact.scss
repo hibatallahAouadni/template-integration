@@ -3,7 +3,7 @@
     .intro::after {
         display: none;
     }
-    .intro-header {
+    .intro__header {
         font-size: 30px;
     }
     .intro__header--black {
@@ -23,55 +23,51 @@
     top: -170px;
 }
 
-.contact-row {
+.contact__row {
     margin-top: -135px;
 }
 
-.container-contact {
+.contact__container {
     width: 80%;
 }
 
-.contact-info {
+.contact__info {
     margin-left: 40px;
     width: 20%;
 }
 
-.contact-form {
+.contact__form {
     background-color: $white;
     border: 1px solid #cfcfcf;
     margin-bottom: 10px;
     padding: 25px 40px;
 }
 
-.contact-form-header {
+.contact__form__header {
     text-transform: uppercase;
     border-bottom: 1px solid #e6e4e4;
     line-height: 50px;
     margin-bottom: 20px;
 }
 
-.contact-form-label {
+.contact__form__label {
     display: block;
     font-size: 14px;
     font-weight: 700;
 }
 
-.red-star {
-    color: $red;
-}
-
-.contact-form-radio {
+.contact__form__radio {
     font-size: 12px;
     margin-bottom: 10px;
     padding: 0 50px 0 20px;
 }
 
-.contact-form-radio-input {
+.contact__form__radio--input {
     margin: 0 5px 0 0;
     vertical-align: middle;
 }
 
-.contact-form-control {
+.contact__form-control {
     padding: 5px 20px 5px 0;
     width: 45%;
 }
@@ -88,7 +84,7 @@
     width: 7.5%;
 }
 
-.contact-form-control.textarea {
+.contact__form-control.textarea {
     width: 100%;
 }
 
@@ -96,18 +92,18 @@ textarea.form-control {
     height: 150px;
 }
 
-.contact-action-mandatory {
+.contact__action-mandatory {
     font-size: 12px;
     margin-top: -10px;
     width: 50%;
 }
 
-.contact-action-buttons {
+.contact__action-buttons {
     text-align: right;
     width: 50%;
 }
 
-.contact-action-button {
+.contact__action-button {
     background-color: $white;
     border: 1px solid $bleu;
     color: $bleu;
@@ -118,18 +114,22 @@ textarea.form-control {
     text-transform: uppercase;
 }
 
-.contact-info-bloc {
+.contact__info-bloc {
     line-height: 32px;
     margin-bottom: 30px;
     padding: 0 30px 0 10px;
 }
 
-.contact-info-bloc-title {
+.contact__info-bloc__title {
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.bleu-color {
+.color--bleu {
     color: $bleu;
+}
+
+.color--red {
+    color: $red;
 }

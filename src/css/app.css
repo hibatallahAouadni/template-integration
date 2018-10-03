@@ -23,24 +23,24 @@ body {
   transform-origin: 0 0;
   transform: skewX(20deg); }
 
-.intro-item {
+.intro__item {
   display: table-cell;
   padding: 100px 0;
   text-align: center;
   vertical-align: middle; }
 
-.intro-item.slide {
+.intro__item.slide {
   vertical-align: top;
   width: 45%; }
 
-.intro-item.text {
+.intro__item.text {
   color: #918f89;
   padding-left: 35px;
   padding-top: 140px;
   text-align: justify;
   width: 55%; }
 
-.intro-header {
+.intro__header {
   color: #2068b6;
   font-size: 48px;
   font-weight: 900;
@@ -48,30 +48,30 @@ body {
   margin-bottom: 60px;
   text-transform: uppercase; }
 
-.intro-header__black {
+.intro__header--black {
   color: #000;
   font-size: 30px;
   font-weight: bold; }
 
-.intro-body {
+.intro__body {
   border-left: 1px solid #f06428;
   letter-spacing: -0.5px;
   line-height: 40px;
   margin-bottom: 120px;
   padding-left: 15px; }
 
-.intro-footer {
+.intro__footer {
   font-size: 24px;
   margin-bottom: 60px;
   text-align: right; }
 
-.intro-footer-list {
+.intro__footer__list {
   list-style-type: none; }
 
-.intro-footer-list li {
+.intro__footer__list li {
   margin: 16px 0; }
 
-.footer-list__span {
+.footer__list__span {
   color: #010101;
   text-transform: uppercase; }
 
@@ -79,14 +79,14 @@ body {
   position: relative;
   overflow: hidden; }
 
-.menu-logo {
+.menu__logo {
   display: table-cell;
   padding: 0 90px; }
 
-.menu-logo-img {
+.menu__logo__img {
   width: 160px; }
 
-.menu-nav {
+.menu__nav {
   background-color: #f06428;
   display: table-cell;
   transform-origin: 0 0;
@@ -94,18 +94,18 @@ body {
   vertical-align: bottom;
   width: 100%; }
 
-.menu-nav-list {
+.menu__nav__list {
   display: flex;
   font-family: 'Saira', sans-serif;
   list-style-type: none;
   transform: skewX(-20deg); }
 
-.menu-nav-list-item {
+.menu__nav__list__item {
   color: #fff;
   text-transform: uppercase;
   padding-left: 80px; }
 
-.menu-nav-list-item a {
+.menu__nav__list__item a {
   text-decoration: none;
   color: #fff; }
 
@@ -244,7 +244,7 @@ div.card {
   transform-origin: 500px 150px;
   transform: rotate(10deg); }
 
-.card__header-icon {
+.card__header__icon {
   display: table-cell;
   text-align: center;
   vertical-align: bottom;
@@ -348,7 +348,7 @@ div.card {
 
 .contact .intro::after {
   display: none; }
-.contact .intro-header {
+.contact .intro__header {
   font-size: 30px; }
 .contact .intro__header--black {
   font-weight: 900; }
@@ -363,46 +363,43 @@ div.card {
   position: relative;
   top: -170px; }
 
-.contact-row {
+.contact__row {
   margin-top: -135px; }
 
-.container-contact {
+.contact__container {
   width: 80%; }
 
-.contact-info {
+.contact__info {
   margin-left: 40px;
   width: 20%; }
 
-.contact-form {
+.contact__form {
   background-color: #fff;
   border: 1px solid #cfcfcf;
   margin-bottom: 10px;
   padding: 25px 40px; }
 
-.contact-form-header {
+.contact__form__header {
   text-transform: uppercase;
   border-bottom: 1px solid #e6e4e4;
   line-height: 50px;
   margin-bottom: 20px; }
 
-.contact-form-label {
+.contact__form__label {
   display: block;
   font-size: 14px;
   font-weight: 700; }
 
-.red-star {
-  color: #ff0000; }
-
-.contact-form-radio {
+.contact__form__radio {
   font-size: 12px;
   margin-bottom: 10px;
   padding: 0 50px 0 20px; }
 
-.contact-form-radio-input {
+.contact__form__radio--input {
   margin: 0 5px 0 0;
   vertical-align: middle; }
 
-.contact-form-control {
+.contact__form-control {
   padding: 5px 20px 5px 0;
   width: 45%; }
 
@@ -416,22 +413,22 @@ div.card {
   content: '';
   width: 7.5%; }
 
-.contact-form-control.textarea {
+.contact__form-control.textarea {
   width: 100%; }
 
 textarea.form-control {
   height: 150px; }
 
-.contact-action-mandatory {
+.contact__action-mandatory {
   font-size: 12px;
   margin-top: -10px;
   width: 50%; }
 
-.contact-action-buttons {
+.contact__action-buttons {
   text-align: right;
   width: 50%; }
 
-.contact-action-button {
+.contact__action-button {
   background-color: #fff;
   border: 1px solid #0064b9;
   color: #0064b9;
@@ -441,17 +438,20 @@ textarea.form-control {
   padding: 15px 30px;
   text-transform: uppercase; }
 
-.contact-info-bloc {
+.contact__info-bloc {
   line-height: 32px;
   margin-bottom: 30px;
   padding: 0 30px 0 10px; }
 
-.contact-info-bloc-title {
+.contact__info-bloc__title {
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase; }
 
-.bleu-color {
+.color--bleu {
   color: #0064b9; }
+
+.color--red {
+  color: #ff0000; }
 
 /*# sourceMappingURL=app.css.map */
