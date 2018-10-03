@@ -13,7 +13,7 @@
     text-transform: uppercase;
 }
 .bloc-title__body {
-    color: #918f89;
+    color: $grey--yellow;
 }
 
 // icons bloc 
@@ -24,7 +24,7 @@
 }
 .bloc-icons__icon {
     padding: 30px;
-    border: 1px solid #9e9e9d;
+    border: 1px solid $grey--9e;
     transform: scale(1) rotate(45deg);
     margin: 0px 50px;
     img {
@@ -32,16 +32,16 @@
     }
 }
 .bloc-icons__icon:active, .bloc-icons__icon:hover {
-    box-shadow: 6px 6px #2068b6;
+    box-shadow: 6px 6px $bleu--logo;
 }
 .bloc-icons__icon.active {
-    box-shadow: 6px 6px #2068b6;
+    box-shadow: 6px 6px $bleu--logo;
 }
 
 // desc bloc 
 
 .bloc-desc {
-    background-color: #f2f2f2;
+    background-color: $grey--f2;
     margin-top: 40px;
     padding-bottom: 50px;
     position: relative;
@@ -52,7 +52,7 @@
     text-transform: uppercase;
 }
 .bloc-active {
-    background-color: #f2f2f2;
+    background-color: $grey--f2;
     display: block !important;
     height: 100px;
     width: 100px;

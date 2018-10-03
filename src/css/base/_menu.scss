@@ -13,7 +13,7 @@
 }
 
 .menu-nav {
-    background-color: #f06428;
+    background-color: $orange--logo;
     display: table-cell;
     transform-origin: 0 0;
     transform: skewX(20deg);
@@ -29,12 +29,12 @@
 }
 
 .menu-nav-list-item {
-    color: #ffffff;
+    color: $white;
     text-transform: uppercase;
     padding-left: 80px;
 }
 
 .menu-nav-list-item a {
     text-decoration: none;
-    color: #fff;
+    color: $white;
 }

@@ -1,3 +1,4 @@
+/*  Variable */
 /*  Base */
 body {
   font-family: 'Lato', sans-serif;
@@ -100,7 +101,7 @@ body {
   transform: skewX(-20deg); }
 
 .menu-nav-list-item {
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   padding-left: 80px; }
 
@@ -292,7 +293,7 @@ div.card {
   height: 0;
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
-  border-left: 7px solid red; }
+  border-left: 7px solid #ff0000; }
 
 .bloc5 .bloc-cards {
   display: block; }
@@ -349,7 +350,7 @@ div.card {
   display: none; }
 .contact .intro-header {
   font-size: 30px; }
-.contact .intro-header__black {
+.contact .intro__header--black {
   font-weight: 900; }
 
 .container {
@@ -373,7 +374,7 @@ div.card {
   width: 20%; }
 
 .contact-form {
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #cfcfcf;
   margin-bottom: 10px;
   padding: 25px 40px; }
@@ -390,7 +391,7 @@ div.card {
   font-weight: 700; }
 
 .red-star {
-  color: red; }
+  color: #ff0000; }
 
 .contact-form-radio {
   font-size: 12px;

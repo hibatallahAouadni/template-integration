@@ -21,7 +21,7 @@ div.card {
     display: table-cell;
     text-align: center;
     vertical-align: bottom;
-    background-color: #2068b6;
+    background-color: $bleu--logo;
     height: 150px;
     width: 150px;
     transform-origin: 30px 40px;
@@ -33,7 +33,7 @@ div.card {
     margin-bottom: 15px;
 }
 .card__header-title {
-    color: #fff;
+    color: $white;
     display: table-cell;
     font-size: 24px;
     font-weight: bold;
@@ -44,7 +44,7 @@ div.card {
     transform: rotate(-10deg);
 }
 .card__contain {
-    color: #918f89;
+    color: $grey--yellow;
     padding: 20px;
 }
 .card__list li {
@@ -66,5 +66,5 @@ div.card {
     height: 0; 
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
-    border-left: 7px solid red;
+    border-left: 7px solid $red;
 }

@@ -1,6 +1,6 @@
 
 .bloc {
-    background-color: #e0e0e0;
+    background-color: $grey--white;
     border-radius: 15px;
     margin: 10px;
     padding: 20px;
@@ -43,6 +43,6 @@
 }
 
 .bloc .tabs a:hover, .bloc .tabs a:active, .bloc .tabs a.active {
-    background-color: #e0e0e0;
-    color: #000;
+    background-color: $grey--white;
+    color: $black;
 }

@@ -5,7 +5,7 @@
 }
 
 .intro::after {
-    background-color: #f06428;
+    background-color: $orange--logo;
     content: '';
     display: block;
     position: absolute;
@@ -30,7 +30,7 @@
 }
 
 .intro-item.text {
-    color: #918f89;
+    color: $grey--yellow;
     padding-left: 35px;
     padding-top: 140px;
     text-align: justify;
@@ -38,7 +38,7 @@
 }
 
 .intro-header {
-    color: #2068b6;
+    color: $bleu--logo;
     font-size: 48px;
     font-weight: 900;
     line-height: 26px;
@@ -47,13 +47,13 @@
 }
 
 .intro-header__black {
-    color: #000;
+    color: $black;
     font-size: 30px;
     font-weight: bold;
 }
 
 .intro-body {
-    border-left: 1px solid #f06428;
+    border-left: 1px solid $orange--logo;
     letter-spacing: -0.5px;
     line-height: 40px;
     margin-bottom: 120px;
