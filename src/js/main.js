@@ -11,29 +11,24 @@ jQuery(function($) {
         }else {
             current = $(this).find('a:first').attr('href');
         }
-        console.log(current);
-        if($('.tabs').parents('#services').length != 0) {
-            $(this).find('a[href="' + current + '"]').addClass('active');
-            switch(current) {
-                case '#bloc1':
-                    $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(0%) rotate(45deg)'});
-                    break;
-                case '#bloc2':
-                    $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(275%) rotate(45deg)'});
-                    break;
-                case '#bloc3':
-                    $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(550%) rotate(45deg)'});
-                    break;
-                case '#bloc4':
-                    $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(820%) rotate(45deg)'});
-                    break;
-                case '#bloc5':
-                    $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(1090%) rotate(45deg)'});
-                    break;
-                default: break;
-            }
-        } else {
-            $(this).find('a[href="' + current + '"]').addClass('active');
+        $(this).find('a[href="' + current + '"]').addClass('active');
+        switch(current) {
+            case '#bloc1':
+                $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(0%) rotate(45deg)'});
+                break;
+            case '#bloc2':
+                $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(250%) rotate(45deg)'});
+                break;
+            case '#bloc3':
+                $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(500%) rotate(45deg)'});
+                break;
+            case '#bloc4':
+                $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(750%) rotate(45deg)'});
+                break;
+            case '#bloc5':
+                $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(1000%) rotate(45deg)'});
+                break;
+            default: break;
         }
         $(current).siblings().hide();
         $(this).find('a').click(function(evt) {
@@ -42,31 +37,25 @@ jQuery(function($) {
             if( link == current) {
                 return false;
             }else {
-                if($('.tabs').parents('#services').length != 0) {
-                    $(this).siblings().removeClass('active');
-                    $(this).addClass('active');
-                    switch($(this).attr('id')) {
-                        case 'pos1':
-                            $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(0%) rotate(45deg)'});
-                            break;
-                        case 'pos2':
-                            $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(275%) rotate(45deg)'});
-                            break;
-                        case 'pos3':
-                            $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(550%) rotate(45deg)'});
-                            break;
-                        case 'pos4':
-                            $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(820%) rotate(45deg)'});
-                            break;
-                        case 'pos5':
-                            $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(1090%) rotate(45deg)'});
-                            break;
-                        default: break;
-                    }
-                    
-                } else {
-                    $(this).siblings().removeClass('active');
-                    $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+                switch($(this).attr('id')) {
+                    case 'pos1':
+                        $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(0%) rotate(45deg)'});
+                        break;
+                    case 'pos2':
+                        $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(250%) rotate(45deg)'});
+                        break;
+                    case 'pos3':
+                        $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(500%) rotate(45deg)'});
+                        break;
+                    case 'pos4':
+                        $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(750%) rotate(45deg)'});
+                        break;
+                    case 'pos5':
+                        $('.bloc-active').css({'transition': 'transform 1s linear', 'transform': 'translateX(1000%) rotate(45deg)'});
+                        break;
+                    default: break;
                 }
                 $(link).show().siblings().hide();
                 current = link;

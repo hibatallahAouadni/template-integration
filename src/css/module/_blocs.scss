@@ -3,7 +3,7 @@
 
 .bloc-title {
     text-align: center;
-    padding: 70px 0 60px;
+    padding: 100px 0 60px;
     position: relative;
     overflow: hidden;
 }
@@ -20,10 +20,10 @@
 
 .bloc-icons {
     display: inline-flex;
-    margin: 40px 160px 100px 0;
+    margin: 40px 0 100px 0;
 }
 .bloc-icons__icon {
-    padding: 30px;
+    padding: 20px;
     border: 1px solid $grey--9e;
     transform: scale(1) rotate(45deg);
     margin: 0px 50px;
