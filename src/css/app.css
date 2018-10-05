@@ -6,6 +6,9 @@ body {
   line-height: 26px;
   margin: 0; }
 
+.row {
+  display: flex; }
+
 .intro {
   position: relative;
   overflow: hidden; }
@@ -183,28 +186,42 @@ body {
 .bloc-title__header {
   font-size: 36px;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 50px; }
 
 .bloc-title__body {
   color: #918f89; }
 
 .bloc-icons {
-  display: inline-flex;
   margin: 40px 0 100px 0; }
+
+.bloc-icons--references {
+  padding: 0 10%; }
 
 .bloc-icons__icon {
   padding: 20px;
   border: 1px solid #9e9e9d;
   transform: scale(1) rotate(45deg);
-  margin: 0px 50px; }
-  .bloc-icons__icon img {
-    transform: rotate(-45deg); }
+  margin: 0px 50px;
+  text-decoration: none; }
 
 .bloc-icons__icon:active, .bloc-icons__icon:hover {
   box-shadow: 6px 6px #2068b6; }
 
 .bloc-icons__icon.active {
   box-shadow: 6px 6px #2068b6; }
+
+.bloc-icons__icon__container {
+  height: 110px;
+  width: 110px;
+  transform: rotate(-45deg);
+  text-align: center; }
+
+.bloc-icons__icon__desc {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #6b6f72; }
 
 .bloc-desc {
   background-color: #f2f2f2;
@@ -297,9 +314,6 @@ div.card {
 
 .bloc5 .bloc-cards {
   display: block; }
-
-.row {
-  display: flex; }
 
 .bloc5__card {
   background-color: #2b7fd9;
@@ -453,5 +467,29 @@ textarea.form-control {
 
 .color--red {
   color: #ff0000; }
+
+.client-bloc {
+  padding: 100px 0 50px 0; }
+
+.client-bloc__client {
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  height: 110px;
+  width: 170px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  vertical-align: middle; }
+
+.row--second {
+  margin-left: 12%; }
+
+.row--first {
+  margin-left: 24%; }
+
+[data-toggle='on'] {
+  display: block; }
+
+[data-toggle='off'] {
+  display: none; }
 
 /*# sourceMappingURL=app.css.map */

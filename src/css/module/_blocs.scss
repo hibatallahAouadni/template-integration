@@ -11,6 +11,7 @@
     font-size: 36px;
     font-weight: bold;
     text-transform: uppercase;
+    margin-bottom: 50px;
 }
 .bloc-title__body {
     color: $grey--yellow;
@@ -19,23 +20,35 @@
 // icons bloc 
 
 .bloc-icons {
-    display: inline-flex;
     margin: 40px 0 100px 0;
+}
+.bloc-icons--references {
+    padding: 0 10%;
 }
 .bloc-icons__icon {
     padding: 20px;
     border: 1px solid $grey--9e;
     transform: scale(1) rotate(45deg);
     margin: 0px 50px;
-    img {
-        transform: rotate(-45deg);
-    }
+    text-decoration: none;
 }
 .bloc-icons__icon:active, .bloc-icons__icon:hover {
     box-shadow: 6px 6px $bleu--logo;
 }
 .bloc-icons__icon.active {
     box-shadow: 6px 6px $bleu--logo;
+}
+.bloc-icons__icon__container {
+    height: 110px;
+    width: 110px;
+    transform: rotate(-45deg);
+    text-align: center;
+}
+.bloc-icons__icon__desc {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #6b6f72;
 }
 
 // desc bloc 

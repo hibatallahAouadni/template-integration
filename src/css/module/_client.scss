@@ -1,0 +1,29 @@
+.client-bloc {
+    padding: 100px 0 50px 0;
+}
+
+.client-bloc__client {
+    background-color: $white;
+    border: 1px solid $grey--c;
+    height: 110px;
+    width: 170px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.row--second {
+    margin-left: 12%;
+}
+
+.row--first {
+    margin-left: 24%;
+}
+
+[data-toggle='on'] {
+  display:block;
+}
+
+[data-toggle='off'] {
+  display:none;
+}
