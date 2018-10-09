@@ -486,10 +486,14 @@ textarea.form-control {
 .row--first {
   margin-left: 24%; }
 
+.bloc-icons__icon.active--country {
+  background-color: #eeeeee;
+  box-shadow: inset 0 0 10px #00000042; }
+
 [data-toggle='on'] {
-  display: block; }
+  opacity: 1; }
 
 [data-toggle='off'] {
-  display: none; }
+  opacity: 0.3; }
 
 /*# sourceMappingURL=app.css.map */

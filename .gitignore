@@ -4,6 +4,7 @@
 .idea
 .sass-cache/*
 css/*
+src/css/.sass-cache/*
 node_modules/*
 package-lock.json
 .scannerwork
