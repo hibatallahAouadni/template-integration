@@ -2,8 +2,8 @@ jQuery(function($) {
 
     var anchor = window.location.hash;
 
-    function filterClients(country, filter) {
-        console.log('welcome to filterCients! Country: ' + country + ' && Filter: ' + filter);
+    function filterClients(country, sector) {
+        console.log('welcome to filterCients! Country: ' + country + ' && Sector: ' + sector);
     }
 
     function getCurrent(elem, anchor, id) {
@@ -22,31 +22,32 @@ jQuery(function($) {
         var id = $(this).attr('id');
         if(id == 'references') {
             var current_country = getCurrent($(this).find('#country'), anchor, 'country');
-            $(this).find('a[href="' + current_country + '"]').addClass('active');
-            var current_filter = getCurrent($(this).find('#filter'), anchor, 'filter');
-            $(this).find('a[href="' + current_filter + '"]').addClass('active');
-            filterClients(current_country,current_filter);
+            $(this).find('a[href="' + current_country + '"]').parent().addClass('active');
+            var current_sector = getCurrent($(this).find('#sector'), anchor, 'sector');
+            $(this).find('a[href="' + current_sector + '"]').addClass('active');
+            filterClients(current_country,current_sector);
             $(this).find('a').click(function(evt) {
-                evt.preventDefault();
                 var link = $(this).attr('href');
-                if(link == current_country || link == current_filter) {
+                if(link == current_country || link == current_sector) {
                     return false;
                 }else {
                     if(link.indexOf('country') > -1) {
-                        $(this).siblings().removeClass('active');
+                        $(this).parent().siblings().removeClass('active');
                         current_country = link;
                         Cookies.set('tabcountry', current_country);
+                        $(this).parent().addClass('active');
                     }else {
-                        $(this).closest('#filter').find('a').each(function(){
+                        $(this).closest('#sector').find('a').each(function(){
                             $(this).removeClass('active');
                         });
-                        current_filter = link;
-                        Cookies.set('tabfilter', current_filter);
+                        current_sector = link;
+                        Cookies.set('tabsector', current_sector);
+                        $(this).addClass('active');
  
                     }
-                    $(this).addClass('active');
-                    filterClients(current_country,current_filter);
+                    filterClients(current_country,current_sector);
                 }
+                
             });
         } else {
             var current = getCurrent($(this), anchor, id);

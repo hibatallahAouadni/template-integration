@@ -26,11 +26,12 @@
     padding: 0 10%;
 }
 .bloc-icons__icon {
-    padding: 20px;
+    background-color: $white;
     border: 1px solid $grey--9e;
-    transform: scale(1) rotate(45deg);
     margin: 0px 50px;
+    padding: 20px;
     text-decoration: none;
+    transform: scale(1) rotate(45deg);
 }
 .bloc-icons__icon:active, .bloc-icons__icon:hover {
     box-shadow: 6px 6px $bleu--logo;
