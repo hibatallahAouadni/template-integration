@@ -3,7 +3,19 @@ jQuery(function($) {
     var anchor = window.location.hash;
 
     function filterClients(country, sector) {
-        console.log('welcome to filterCients! Country: ' + country + ' && Sector: ' + sector);
+        var items = document.querySelectorAll('.client-bloc__client');
+        for (var i = 0; i < items.length; i++) {
+            var itemTags = items[i].getAttribute('data-tags');
+            country_tag = (country.split("#"))[1];
+            sector_tag = (sector.split("#"))[1];
+            if (itemTags != null) {
+                if (itemTags.indexOf(country_tag) > -1 && itemTags.indexOf(sector_tag) > -1) {
+                    items[i].setAttribute('data-toggle', 'on');
+                }else {
+                    items[i].setAttribute('data-toggle', 'off');
+                }
+            }
+        }
     }
 
     function getCurrent(elem, anchor, id) {
