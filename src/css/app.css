@@ -112,6 +112,82 @@ body {
   text-decoration: none;
   color: #fff; }
 
+.form-control {
+  border: 1px solid #cccccc;
+  padding: 4px 10px;
+  height: 30px;
+  width: 100%; }
+
+.form-control__select {
+  box-sizing: border-box;
+  color: #909090;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border: 1px solid #e0e0e0;
+  padding-left: 15px;
+  height: 60px;
+  width: 100%; }
+
+.form-control__container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.form-control__checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1000;
+  height: 20px;
+  width: 18px; }
+
+.form-control__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #cccccc; }
+
+/* On mouse-over, add a grey background color */
+.form-control__container:hover .form-control__checkbox ~ .form-control__checkmark {
+  background-color: #9e9e9d; }
+
+/* When the checkbox is checked, add a blue background */
+.form-control__checkbox:checked ~ .form-control__checkmark {
+  background-color: #0064b9; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.form-control__checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.form-control__checkbox:checked ~ .form-control__checkmark:after {
+  display: block; }
+
+/* Style the checkmark/indicator */
+.form-control__checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
 /* Layout */
 .wrapper {
   max-width: 1280px;
@@ -418,12 +494,6 @@ div.card {
   padding: 5px 20px 5px 0;
   width: 45%; }
 
-.form-control {
-  border: 1px solid #cccccc;
-  padding: 4px 10px;
-  height: 30px;
-  width: 100%; }
-
 .span {
   content: '';
   width: 7.5%; }
@@ -521,5 +591,93 @@ textarea.form-control {
 
 [data-toggle='off'] {
   opacity: 0.3; }
+
+.offer-tabs__container {
+  background-color: #0064b9;
+  color: #fff;
+  margin: 0 100px;
+  padding: 30px;
+  position: relative;
+  text-align: center;
+  top: -70px; }
+
+.offer-tabs__title {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.offer-tabs__tabs {
+  display: inline-flex;
+  margin-top: 30px; }
+
+.offer-tabs__button {
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 10px 20px;
+  margin: 0 20px;
+  text-decoration: none; }
+
+.offer-tabs__button--active, .offer-tabs__button:hover, .offer-tabs__button:active {
+  color: #f06428;
+  border-color: #f06428; }
+
+.offer__row {
+  margin-top: -15px; }
+
+.offer-list {
+  background-color: #fff;
+  border: 1px solid #cfcfcf;
+  width: 70%; }
+
+.offer-list__item {
+  border-bottom: 1px solid #d7d7d7;
+  padding: 20px 30px 40px; }
+
+.offer-list__item:last-child {
+  border-bottom: none; }
+
+.offer-list__item__header {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 15px;
+  margin-bottom: 30px; }
+
+.offer-list__item__title {
+  color: #000;
+  width: 85%; }
+
+.offer-list__item__btn {
+  border: 1px solid #0064b9;
+  color: #0064b9;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  padding: 5px 0;
+  width: 15%; }
+
+.offer-list__item__feature {
+  color: #9b9b9b;
+  font-size: 14px;
+  width: 33.33%; }
+
+.offer-list__item__feature::before {
+  content: "#"; }
+
+.offer-blocks {
+  padding: 0 60px 0 30px;
+  width: 30%; }
+
+.offer-blocks__item {
+  margin-bottom: 60px; }
+
+.offer-blocks__item__title {
+  color: #333333;
+  font-size: 24px;
+  font-weight: lighter;
+  line-height: 24px;
+  margin-bottom: 25px; }
+
+.offer-blocks__item__form {
+  color: #888888; }
 
 /*# sourceMappingURL=app.css.map */

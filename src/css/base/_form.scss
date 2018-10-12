@@ -1,0 +1,86 @@
+
+.form-control {
+    border: 1px solid $grey--c;
+    padding: 4px 10px;
+    height: 30px;
+    width: 100%;
+}
+
+.form-control__select {
+    box-sizing: border-box;
+    color: #909090;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border: 1px solid #e0e0e0;
+    padding-left: 15px;
+    height: 60px;
+    width: 100%;
+}
+
+.form-control__container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.form-control__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1000;
+    height: 20px;
+    width: 18px;
+}
+
+.form-control__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $grey--c;
+}
+
+/* On mouse-over, add a grey background color */
+.form-control__container:hover .form-control__checkbox ~ .form-control__checkmark {
+        background-color: $grey--9e;
+}
+
+/* When the checkbox is checked, add a blue background */
+.form-control__checkbox:checked ~ .form-control__checkmark {
+    background-color: $bleu;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.form-control__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.form-control__checkbox:checked ~ .form-control__checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.form-control__checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
