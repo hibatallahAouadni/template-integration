@@ -5,6 +5,10 @@ body {
     margin: 0;
 }
 
+::placeholder {
+    color: #cdcdcd;
+}
+
 .row {
     display: flex;
 }
