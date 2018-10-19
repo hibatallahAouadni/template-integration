@@ -593,7 +593,7 @@ textarea.form-control {
   opacity: 1; }
 
 [data-toggle='off'] {
-  opacity: 0.3; }
+  opacity: .3; }
 
 .offer-tabs__container {
   background-color: #0064b9;
